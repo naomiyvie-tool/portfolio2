@@ -1,0 +1,226 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    background:#e8f7f7;
+    padding:30px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    background:white;
+    box-shadow:0 0 15px rgba(0,0,0,0.1);
+}
+
+/* HEADER */
+
+header{
+    padding:40px;
+    background:white;
+}
+
+nav{
+    display:none;
+}
+
+/* HERO */
+
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:white;
+    position:relative;
+    padding:0;
+}
+
+.hero-text{
+    width:40%;
+    background:#1fc4cc;
+    color:white;
+    padding:60px 40px;
+    border-top-right-radius:120px;
+    border-bottom-right-radius:120px;
+}
+
+.hero-text h2{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.hero-text h1{
+    font-size:40px;
+    color:white;
+    margin-bottom:15px;
+}
+
+.hero-text p{
+    line-height:1.7;
+}
+
+.hero-image{
+    position:absolute;
+    left:45%;
+    transform:translateX(-50%);
+}
+
+.hero-image img{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:50%;
+    border:12px solid white;
+    box-shadow:0 0 15px rgba(0,0,0,0.1);
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:white;
+    color:#1fc4cc;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+/* NOM A DROITE */
+
+.hero::after{
+    content:"Étudiante en Génie Informatique";
+    position:absolute;
+    right:80px;
+    font-size:30px;
+    color:#20c4c9;
+    font-weight:bold;
+}
+
+/* CONTENU */
+
+section{
+    padding:40px;
+}
+
+#apropos,
+#competences,
+#projets,
+#contact{
+    background:white;
+}
+
+h2{
+    color:#20c4c9;
+    margin-bottom:20px;
+    text-transform:uppercase;
+    border-left:5px solid #20c4c9;
+    padding-left:10px;
+}
+
+/* DEUX COLONNES */
+
+#apropos,
+#competences,
+#projets,
+#contact{
+    border-bottom:1px solid #ddd;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.card{
+    background:#fafafa;
+    border-left:5px solid #20c4c9;
+    padding:20px;
+}
+
+.card h3{
+    color:#20c4c9;
+    margin-bottom:10px;
+}
+
+/* BARRES DE COMPETENCES */
+
+.card p{
+    line-height:1.7;
+}
+
+/* FORMULAIRE */
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input,
+textarea{
+    border:1px solid #ccc;
+    padding:15px;
+    border-radius:5px;
+}
+
+textarea{
+    height:150px;
+}
+
+button{
+    background:#20c4c9;
+    color:white;
+    border:none;
+    padding:15px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#15afb4;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    background:#20c4c9;
+    color:white;
+    padding:20px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .hero{
+        flex-direction:column;
+        padding-top:120px;
+    }
+
+    .hero-text{
+        width:100%;
+        border-radius:0;
+    }
+
+    .hero-image{
+        position:absolute;
+        top:10px;
+        left:50%;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .hero::after{
+        display:none;
+    }
+}
